@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      ul {
+        list-style :none;
+      }
+      .tick {
+        padding-top : 20px;
+        padding-bottom: 20px;
+      }
+      body {
+        font-family: "Sono", sans-serif;
+      }
+      h1 {
+        font-size: 5rem;
+        text-align: center;
+      }
+      span {
+        color :cadetblue;
+      }
+      .plan-title {
+        font-weight: bold;
+      }
+      .plan-price {
+        font-size: 2.5rem;
+        font-weight: bolder;
+      }
+      .pricing-container {
+        display : flex;
+        justify-content :center;
+        align-items: center;
+        gap : 20px;
+        height : 400px;
+      }
+      .pricing-plan {
+        flex: 1;
+        max-width: 400px;
+        height : 200px;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        text-align: center;  
+      }
+      .pricing-plan#Premium {
+        background-color: rgb(238, 222, 129);
+      }
+      .plan-button {
+        font-weight: bolder;
+        color : wheat;
+        background-color: rgb(255, 131, 74);
+        height : 25px;
+        border : 1px solid rgb(255, 131, 74);
+        border-radius: 10%;
+      }
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        .pricing-container {
+          flex-direction: column;
+          height : 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1> <span>Subscribe</span> to <br/>  one of our plans </h1>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">Basic 😁</div>
+        <div class="plan-price">$9.99/month</div>
+        <div class = "tick">
+        <!-- <ul class="plan-features"> -->
+          ✅ 10GB Storage<br/>
+          ✅ 1 User<br/>
+          🚫 Support<br/>
+        </div>
+        <!-- </ul> -->
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Standard 🤩</div>
+        <div class="plan-price">$19.99/month</div>
+        <div class = "tick">
+        <!-- <ul class="plan-features"> -->
+          ✅ 50GB Storage<br/>
+          ✅ 5 Users<br/>
+          ✅ Phone &amp; Email Support<br/>
+        <!-- </ul> -->
+      </div>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan" id = "Premium">
+        <div class="plan-title">Premium 😎</div>
+        <div class="plan-price">$49.99/month</div>
+        <div class="tick">
+          ✅ 100GB Storage<br/>
+          ✅ 10 Users<br/>
+          ✅ 24/7 Support<br/>
+        </div>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>
